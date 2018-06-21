@@ -10,7 +10,7 @@ import org.ChatUI.entity.Employee;
 
 
 public class WebSocketMsg {
-    public enum MsgType {EMPTY, EMPLOYEE_DELETE, EMPLOYEE_CREATE, EMPLOYEE_UPDATE}
+    public enum MsgType {EMPTY, EMPLOYEE_DELETE, EMPLOYEE_CREATE, EMPLOYEE_UPDATE, MSG_CREATE}
     private MsgType msgType;
 
     private String status = "";

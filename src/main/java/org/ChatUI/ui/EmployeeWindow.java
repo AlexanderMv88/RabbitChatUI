@@ -33,7 +33,7 @@ public class EmployeeWindow extends Window{
     
     //new
     public EmployeeWindow() {
-        actionBtn.setCaption("Добавить пользователя");
+        actionBtn.setCaption("Создать пользователя");
         setCommonContent();
         
         actionBtn.addClickListener(e -> addObj());
@@ -56,7 +56,7 @@ public class EmployeeWindow extends Window{
 */
         RabbitTemplate rabbitTemplate = ((NavigatorUI) getCurrent()).getRabbitTemplate();
         try {
-            new RabbitMqPublisher().sendCreateMessage(rabbitTemplate, employee);
+            new RabbitMqPublisher().sendCreateEmployeeMessage(rabbitTemplate, employee);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
@@ -80,7 +80,7 @@ public class EmployeeWindow extends Window{
         RabbitTemplate rabbitTemplate = ((NavigatorUI) getCurrent()).getRabbitTemplate();
         try {
 
-            new RabbitMqPublisher().sendUpdateMessage(rabbitTemplate, oldEmployee, employee);
+            new RabbitMqPublisher().sendUpdateEmployeeMessage(rabbitTemplate, oldEmployee, employee);
 
             //rabbitTemplate.convertAndSend("", jsonEmployeeForRemove);
         } catch (JsonProcessingException e) {

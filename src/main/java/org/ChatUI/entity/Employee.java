@@ -57,4 +57,9 @@ public class Employee {
         this.id = employee.getId();
         this.fullName=employee.getFullName();
     }
+
+    @Override
+    public String toString() {
+        return fullName;
+    }
 }

@@ -18,6 +18,8 @@ import com.vaadin.ui.UI;
 import org.ChatUI.Broadcaster;
 import org.ChatUI.WebSocketMsg;
 import org.ChatUI.entity.Employee;
+import org.ChatUI.entity.Msg;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.client.support.BasicAuthorizationInterceptor;
@@ -26,8 +28,13 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PreDestroy;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+
+import static org.ChatUI.mq.RabbitEmployee.EMPLOYEE_SELECT_EVENT;
+import static org.ChatUI.mq.RabbitEmployee.TO_SERVICE_EMPLOYEE_FANOUT_EXCHANGE;
+import static org.ChatUI.mq.RabbitMqPublisher.createMessage;
 
 
 /**
@@ -40,10 +47,23 @@ import java.util.List;
 @Theme("valo")
 public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
 
-    private MainMenuForm mainMenuForm = new MainMenuForm();
+
+    private MainMenuForm mainMenuForm;
+    private EmployeeForm employeeForm;
+    private LoginForm loginForm;
+
+    private List<Employee> employees;
+
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
     Navigator navigator;
 
+    public static final String EMPLOYEE_FORM = "employeeForm";
+    public static final String LOGIN_FORM = "loginForm";
     public static final String MAIN_MENU_FORM = "mainMenuForm";
+
     public RestTemplate restTemplate = new RestTemplate();
 
     private RabbitTemplate rabbitTemplate;
@@ -59,12 +79,43 @@ public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
 
     @Override
     protected void init(VaadinRequest request) {
+        requestAllEmployee();
+
         restTemplate.getInterceptors().add(new BasicAuthorizationInterceptor("Alexander", "12345"));
         navigator = new Navigator(this, this);
+
+        mainMenuForm = new MainMenuForm();
+        employeeForm = new EmployeeForm();
+        loginForm = new LoginForm();
+
         navigator.addView(MAIN_MENU_FORM, mainMenuForm);
+        navigator.addView(EMPLOYEE_FORM, employeeForm);
+        navigator.addView(LOGIN_FORM, loginForm);
         navigator.navigateTo(MAIN_MENU_FORM);
         Broadcaster.register(this);
 
+
+
+    }
+
+    private void requestAllEmployee() {
+        RabbitTemplate rabbitTemplate = ((NavigatorUI) UI.getCurrent()).getRabbitTemplate();
+        rabbitTemplate.setExchange(TO_SERVICE_EMPLOYEE_FANOUT_EXCHANGE);
+        Message msgRequest = createMessage(EMPLOYEE_SELECT_EVENT, "");
+        Message msg = rabbitTemplate.sendAndReceive(msgRequest);
+        String jsonEntities = new String(msg.getBody());
+        //String jsonEntities = (String) rabbitTemplate.convertSendAndReceive("", "getAll");
+
+
+        ObjectMapper mapper = new ObjectMapper();
+        CollectionType javaType = mapper.getTypeFactory()
+                .constructCollectionType(List.class, Employee.class);
+
+        try {
+            employees = mapper.readValue(jsonEntities, javaType);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @PreDestroy
@@ -84,6 +135,7 @@ public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
             System.out.println("Получил сообщение в UI = " + message);
             String jsonEmployee;
             Employee employee = null;
+            Msg msg = null;
             switch (message.getMsgType()) {
 
                 case EMPLOYEE_DELETE:
@@ -92,8 +144,8 @@ public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
                     try {
                         jsonEmployee = message.getText();
                         employee = new ObjectMapper().readValue(jsonEmployee, Employee.class);
-                        mainMenuForm.employees.remove(employee);
-                        mainMenuForm.employeeGrid.setItems(mainMenuForm.employees);
+                        employeeForm.employees.remove(employee);
+                        employeeForm.employeeGrid.setItems(employeeForm.employees);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -105,8 +157,9 @@ public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
                     try {
                         jsonEmployee = message.getText();
                         employee = new ObjectMapper().readValue(jsonEmployee, Employee.class);
-                        mainMenuForm.employees.add(employee);
-                        mainMenuForm.employeeGrid.setItems(mainMenuForm.employees);
+                        employees.add(employee);
+                        employeeForm.employeeGrid.setItems(employees);
+                        loginForm.userCBox.setItems(employees);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -126,14 +179,30 @@ public class NavigatorUI extends UI implements Broadcaster.BroadcastListener {
                         List<Employee> employees = mapper.readValue(jsonEmployees, javaType);
                         Employee oldEmployee = employees.get(0);
                         Employee newEmployee = employees.get(1);
-                        mainMenuForm.employees.remove(oldEmployee);
-                        mainMenuForm.employees.add(newEmployee);
+                        employeeForm.employees.remove(oldEmployee);
+                        employeeForm.employees.add(newEmployee);
 
-                        mainMenuForm.employees.sort(
+                        employeeForm.employees.sort(
                                 Comparator.comparing(Employee::getId)
                         );
 
-                        mainMenuForm.employeeGrid.setItems(mainMenuForm.employees);
+                        employeeForm.employeeGrid.setItems(employeeForm.employees);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    break;
+
+
+                case MSG_CREATE:
+                    try {
+                        String jsonMsg = message.getText();
+
+                        ObjectMapper mapper = new ObjectMapper();
+                        msg = new ObjectMapper().readValue(jsonMsg, Msg.class);
+                        mainMenuForm.chatTArea.setValue(mainMenuForm.chatTArea.getValue() + "\n" + msg.getSender()+": "+msg.getText());
+                        //employeeForm.employeeGrid.setItems(employeeForm.employees);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

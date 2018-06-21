@@ -10,7 +10,9 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 
 
+
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static com.codeborne.selenide.Selectors.byId;
 import static com.codeborne.selenide.Selectors.byText;
@@ -30,10 +32,23 @@ public class StepsDefinition {
         $(byText(fieldName1)).should(Condition.appear);
     }
 
+
+    @То("^откроется страница входа в систему с текстом '(.+)'")
+    public void checkOnLoadPage(String fieldName1){
+        $(byText(fieldName1)).should(Condition.appear);
+    }
+
     @И("кнопками:$")
     public void checkOnLoadWindowWithButtons(List<String> buttons){
         for (String button:buttons){
             $(byText(button)).should(Condition.appear);
+        }
+    }
+
+    @И("полями:$")
+    public void checkOnLoadWindowWithFields(List<String> fields){
+        for (String field:fields){
+            $(byText(field)).should(Condition.appear);
         }
     }
 
@@ -55,8 +70,20 @@ public class StepsDefinition {
     }
 
     private void findFieldByUpperLabelAndSetValue(String fieldName1, String fieldVal1) {
-        SelenideElement elem = $(By.className("v-window-wrap")).find(byText(fieldName1));
-        String idFor1 =  elem.parent().attr("for");
+        SelenideElement elem;
+        String idFor1;
+
+            elem = $(By.className("v-window-wrap")).find(byText(fieldName1));
+            if (!elem.exists()){
+                elem = $(By.className("v-slot")).find(byText(fieldName1));
+            }
+            if (!elem.exists()){
+                elem = $(By.className("v-expand")).find(byText(fieldName1));
+            }
+            idFor1 =  elem.parent().attr("for");
+
+
+
 
         SelenideElement elem1 = $(byId(idFor1));
         System.out.println("elem1 = " + elem1.toString());
@@ -73,13 +100,31 @@ public class StepsDefinition {
     }
 
     @То("^закроется текущее окно и отобразится страница '(.+)' с таблицей")
-    public void checkOnLoadWindow(String windowLbl){
+    public void checkOnCloseAndLoadPageWithGrid(String windowLbl){
+        $(byText(windowLbl)).should(Condition.appear);
+    }
+
+    @То("^закроется текущее окно и отобразится страница '(.+)'")
+    public void checkOnCloseAndLoadPageWithText(String windowLbl){
+        $(byText(windowLbl)).should(Condition.appear);
+    }
+
+    @То("^отобразится страница '(.+)'")
+    public void checkOnLoadPageWithText(String windowLbl){
         $(byText(windowLbl)).should(Condition.appear);
     }
 
     @И("^таблица будет содержать в себе '(.+)'")
     public void checkTableOnParam1(String param1){
         $(byText(param1)).should(Condition.appear);
+    }
+
+    @То("^поле '(.+)' будет содержать '(.+)'")
+    public void checkFieldData1(String fieldName1, String fieldVal1){
+        //System.out.println($(byText(fieldName1)).parent().attr("for"));
+        findFieldByUpperLabelAndCheckValue(fieldName1, fieldVal1);
+        //System.out.println("Есс");
+
     }
 
 
@@ -122,6 +167,14 @@ public class StepsDefinition {
 
     private void findFieldByUpperLabelAndCheckValue(String fieldName1, String fieldVal1) {
         SelenideElement labelElement = $(By.className("v-window-wrap")).find(byText(fieldName1));
+        if (!labelElement.exists()){
+            labelElement = $(By.className("v-slot")).find(byText(fieldName1));
+        }
+        if (!labelElement.exists()){
+            labelElement = $(By.className("v-expand")).find(byText(fieldName1));
+        }
+        //idFor1 =  labelElement.parent().attr("for");
+
         String idFor1 =  labelElement.parent().attr("for");
 
         SelenideElement textFieldElement = $(byId(idFor1));
@@ -131,7 +184,7 @@ public class StepsDefinition {
         }else{
             textFieldElement = labelElement.parent().parent().find(By.tagName("input"));
         }
-        Assert.assertEquals(textFieldElement.getValue(), fieldVal1);
+        Assert.assertTrue(textFieldElement.getValue().contains(fieldVal1) );
     }
 
 
