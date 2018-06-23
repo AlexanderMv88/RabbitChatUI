@@ -1,0 +1,17 @@
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/BasicForm.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/entity/Msg.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/ui/EmployeeWindow.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/entity/Employee.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/Broadcaster.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/mq/RabbitMsg.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/Formats.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/ui/LoginForm.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/mq/RabbitEmployee.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/WebSocketMsg.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/EmployeeUiApplication.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/mq/RabbitConfiguration.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/ui/MainMenuForm.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/ui/NavigatorUI.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/mq/RabbitMqListener.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/mq/RabbitMqPublisher.java
+/mnt/3AE09D87682F54BA/workspace/java/Spring.BOOT/Examples/RabbitMQ/ChatUI/src/main/java/org/ChatUI/ui/EmployeeForm.java
