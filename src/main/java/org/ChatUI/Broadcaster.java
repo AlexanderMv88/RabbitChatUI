@@ -19,12 +19,10 @@ public class Broadcaster implements Serializable {
 
     static ExecutorService executorService = Executors.newSingleThreadExecutor();
 
-
     public interface BroadcastListener {
         void receiveBroadcast(WebSocketMsg message);
 
     }
-
 
     private static LinkedList<BroadcastListener> listeners = new LinkedList<BroadcastListener>();
     private static Map<BroadcastListener, String> userlist = new ConcurrentHashMap<BroadcastListener, String>();
@@ -40,8 +38,6 @@ public class Broadcaster implements Serializable {
         for (final BroadcastListener listener: removeList) {
             listeners.remove(listener);
             userlist.remove(listener);
-            //WebSocketMsg msg = new WebSocketMsg("deluser", "", listener.toString(), "");
-            //broadcast(msg);
         }
     }
 
@@ -53,15 +49,9 @@ public class Broadcaster implements Serializable {
             userlist.put(targetListener, username);
         }
         for (final BroadcastListener listener: listeners) {
-            //WebSocketMsg msg = new WebSocketMsg("adduser", "", listener.toString(), userlist.get(listener));
-            //broadcast(msg);
+
         }
     }
-
-
-    /*public static void sendMsgToAll() {
-
-    }*/
 
     public static synchronized void unregister(BroadcastListener listener) {
         listeners.remove(listener);
@@ -73,43 +63,6 @@ public class Broadcaster implements Serializable {
                 listener.receiveBroadcast(message);
             });
     }
-/*
-    @Scheduled(fixedRate=1000)
-    public static void cyclicPush(){
-        FileSystem fileSystem= FileSystems.getDefault();
-        WatchService watcher;
-        try {
-            String dir = "/var/spool/gammu/inbox";
-
-            watcher = fileSystem.newWatchService();
-            Path msgDir = fileSystem.getPath(dir);
-            msgDir.register(watcher, StandardWatchEventKinds.ENTRY_CREATE);
-
-            WatchKey watchKey = watcher.take();
-
-            List<WatchEvent<?>> events = watchKey.pollEvents();
-
-            for(WatchEvent event : events){
-                if (event.kind() == StandardWatchEventKinds.ENTRY_CREATE){
-                    System.out.println("created = " + event.context().toString());
-                    //TODO: parse sms
-                    try(FileInputStream inputStream = new FileInputStream(dir + event.context().toString())){
-                        String smsTxt = IOUtils.toString(inputStream);
-                        System.out.println("smsTxt = " + smsTxt);
-                    }
-                }
-            }
-
-        } catch (IOException ex) {
-            Logger.getLogger(Broadcaster.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (InterruptedException ex) {
-            Logger.getLogger(Broadcaster.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-
-    }
-
-*/
 
     @Scheduled(fixedRate=1000)
     public static void timer(){

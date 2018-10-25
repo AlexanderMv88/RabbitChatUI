@@ -17,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeForm.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmployeeForm.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="102" column="78" selection-start-line="102" selection-start-column="78" selection-end-line="102" selection-end-column="78" />
+            <state relative-caret-position="810">
+              <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -29,7 +29,7 @@
       <file leaf-file-name="MainMenuForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/MainMenuForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="120">
               <caret line="29" column="64" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="64" />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="LoginForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/LoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="300">
               <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
             </state>
           </provider>
@@ -47,44 +47,17 @@
       <file leaf-file-name="RabbitMqPublisher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqPublisher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="435">
               <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RabbitMqListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="90" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavigatorUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/NavigatorUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
-              <caret line="159" selection-start-line="159" selection-end-line="159" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4.1. createUser.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/feature/4.1. createUser.feature">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="37" selection-start-line="1" selection-start-column="37" selection-end-line="1" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RabbitConfiguration.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RabbitConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="451">
+              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1249#1250#0" expanded="true" />
@@ -98,23 +71,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="4.2. sendMessage.feature" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/feature/4.2. sendMessage.feature">
+      <file leaf-file-name="BasicForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/BasicForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            <state relative-caret-position="870">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeWindow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeWindow.java">
+      <file leaf-file-name="Broadcaster.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Broadcaster.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="780">
+              <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeUiApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/EmployeeUiApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Formats.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Formats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebSocketMsg.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/WebSocketMsg.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1215">
+              <caret line="118" selection-start-line="118" selection-end-line="118" />
             </state>
           </provider>
         </entry>
@@ -191,20 +188,21 @@
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/entity/Msg.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMsg.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqPublisher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/BasicForm.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/WebSocketMsg.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/ui/MainMenuForm.java" />
         <option value="$PROJECT_DIR$/src/main/resources/feature/1.2. sendMessage.feature" />
         <option value="$PROJECT_DIR$/src/test/java/org/ChatUI/StepsDefinition.java" />
         <option value="$PROJECT_DIR$/src/main/resources/feature/3.1. showChatUser.feature" />
         <option value="$PROJECT_DIR$/src/test/java/org/ChatUI/EmployeeUiApplicationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeForm.java" />
         <option value="$PROJECT_DIR$/src/main/resources/feature/4.2. sendMessage.feature" />
         <option value="$PROJECT_DIR$/src/main/resources/feature/4.1. login.feature" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/ui/NavigatorUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/ui/LoginForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/BasicForm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/Broadcaster.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/WebSocketMsg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeForm.java" />
       </list>
     </option>
   </component>
@@ -231,56 +229,43 @@
         <subPane>
           <expand>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
-              <item name="mq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="RabbitChatUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RabbitChatUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatUI" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +345,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.test in ChatUI">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -452,9 +437,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="test_in_ChatUI - 2018.06.21 at 15h 41m 28s.xml">
-      <configuration name="test in ChatUI" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="test_in_ChatUI - 2018.06.21 at 15h 44m 33s.xml">
       <configuration name="test in ChatUI" configurationId="JUnit" />
     </history-entry>
@@ -482,34 +464,38 @@
     <history-entry file="test_in_ChatUI - 2018.06.22 at 09h 34m 39s.xml">
       <configuration name="test in ChatUI" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="test_in_ChatUI - 2018.10.25 at 12h 21m 16s.xml">
+      <configuration name="test in ChatUI" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="0" width="1926" height="1058" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32914045" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32914045" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32914045" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.37002096" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.37002096" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32914045" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32914045" />
@@ -649,24 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Formats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/util/Comparator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/EmployeeUiApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -701,20 +673,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMsg.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/BasicForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/WebSocketMsg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/feature/3.3 changeChatUser.feature" />
     <entry file="jar://$MAVEN_REPOSITORY$/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar!/cucumber/runtime/Utils.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -736,13 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Broadcaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -772,7 +723,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/NavigatorUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
+        <state relative-caret-position="1785">
           <caret line="159" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
@@ -786,43 +737,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="270">
           <caret line="34" column="90" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="90" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitMqPublisher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="435">
           <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/LoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="300">
           <caret line="26" column="61" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/MainMenuForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="120">
           <caret line="29" column="64" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="102" column="78" selection-start-line="102" selection-start-column="78" selection-end-line="102" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/mq/RabbitConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="451">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1249#1250#0" expanded="true" />
@@ -832,6 +776,48 @@
             <element signature="e#1872#1873#0" expanded="true" />
             <element signature="e#1939#1940#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/BasicForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Broadcaster.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/EmployeeUiApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/Formats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/WebSocketMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/ChatUI/ui/EmployeeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="83" column="4" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
         </state>
       </provider>
     </entry>

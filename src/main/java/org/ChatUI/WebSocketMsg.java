@@ -95,10 +95,6 @@ public class WebSocketMsg {
         this.text = text;
         this.username = username;
         this.msgType = msgType.EMPTY;
-
-
-
-
     }
 
     public WebSocketMsg(String status) {
@@ -120,9 +116,6 @@ public class WebSocketMsg {
     public WebSocketMsg(MsgType msgType) {
         this.msgType = msgType;
     }
-
-
-
 
     public String toString(){
         return this.date + " " +this.time+ " Статус: "+this.status+" Текст: "+this.text;

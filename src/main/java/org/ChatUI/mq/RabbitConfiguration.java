@@ -22,16 +22,10 @@ public class RabbitConfiguration {
 
     @Bean
     public ConnectionFactory connectionFactory() {
-//Для виртуалки
-/*        CachingConnectionFactory connectionFactory =
-                new CachingConnectionFactory("localhost");
-        connectionFactory.setUsername("admin");
-        connectionFactory.setPassword("admin");*/
-
         CachingConnectionFactory connectionFactory =
-                new CachingConnectionFactory("192.168.1.14");
-        connectionFactory.setUsername("user");
-        connectionFactory.setPassword("pass");
+                new CachingConnectionFactory("192.168.11.20");
+        connectionFactory.setUsername("admin");
+        connectionFactory.setPassword("admin");
         return connectionFactory;
     }
 
@@ -53,13 +47,10 @@ public class RabbitConfiguration {
         return new Queue(FROM_SERVICE_EMPLOYEE_EVENT_QUEUE);
     }
 
-
-
     @Bean
     public FanoutExchange toServiceEmployeeFanoutExchange(){
         return new FanoutExchange(TO_SERVICE_EMPLOYEE_FANOUT_EXCHANGE);
     }
-
 
     @Bean
     public Queue fromServiceEmployeeEventQueue() {
@@ -75,7 +66,5 @@ public class RabbitConfiguration {
     public Binding bindingQueueToFanoutExchange(){
         return BindingBuilder.bind(fromServiceEmployeeEventQueue()).to(fromServiceEmployeeFanoutExchange());
     }
-
-
 
 }

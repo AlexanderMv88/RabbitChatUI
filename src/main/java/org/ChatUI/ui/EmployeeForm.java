@@ -46,13 +46,8 @@ public class EmployeeForm extends Panel implements View{
         this.lbl.setCaption(currentTimeStr);
     }
 
-
-
-
     public EmployeeForm() {
         employeeGrid.addColumn(Employee::getFullName).setCaption("ФИО");
-
-
         Button addBtn = new Button("Добавить", e -> addEmployeeWindow());
         Button changeBtn = new Button("Изменить", e -> changeEmployeeWindow());
         Button deleteBtn = new Button("Удалить", e -> removeEmployee());
@@ -72,10 +67,8 @@ public class EmployeeForm extends Panel implements View{
             } catch (JsonProcessingException e) {
                 e.printStackTrace();
             }
-
         }
     }
-
 
     public void enter(ViewChangeListener.ViewChangeEvent event) {
         try {
@@ -86,32 +79,12 @@ public class EmployeeForm extends Panel implements View{
     }
 
     private void getAllEmployeeToGrid() throws IOException {
-        /*RabbitTemplate rabbitTemplate = ((NavigatorUI) getCurrent()).getRabbitTemplate();
-        rabbitTemplate.setExchange(TO_SERVICE_EMPLOYEE_FANOUT_EXCHANGE);
-        Message msgRequest = createMessage(EMPLOYEE_SELECT_EVENT, "");
-        Message msg = rabbitTemplate.sendAndReceive(msgRequest);
-        String jsonEntities = new String(msg.getBody());
-        //String jsonEntities = (String) rabbitTemplate.convertSendAndReceive("", "getAll");
-
-
-        ObjectMapper mapper = new ObjectMapper();
-        CollectionType javaType = mapper.getTypeFactory()
-                .constructCollectionType(List.class, Employee.class);
-
-        employees = mapper.readValue(jsonEntities, javaType);
-        *//*List<Employee> chatUsers = chatUsersResponse.getBody();*/
         employeeGrid.setItems(((NavigatorUI) UI.getCurrent()).getEmployees());
     }
-
-
-
 
     private void addEmployeeWindow() throws NullPointerException, IllegalArgumentException {
         EmployeeWindow employeeWindow = new EmployeeWindow();
         getUI().addWindow(employeeWindow);
-        /*employeeWindow.addCloseListener(e1 -> {
-            refreshChatUsersGrid();
-        });*/
     }
 
     private void changeEmployeeWindow() throws NullPointerException, IllegalArgumentException {
@@ -119,12 +92,8 @@ public class EmployeeForm extends Panel implements View{
 
         if (employeeGrid.asSingleSelect().getValue() != null) {
             employee = employeeGrid.asSingleSelect().getValue();
-
             EmployeeWindow employeeWindow = new EmployeeWindow(employee);
             getUI().addWindow(employeeWindow);
-            /*employeeWindow.addCloseListener(e1 -> {
-                refreshChatUsersGrid();
-            });*/
         }else{
             new Notification("Внимание",
                     "Выберите пользователя в таблице",

@@ -44,12 +44,7 @@ public class BasicForm extends CustomComponent implements View, Handler  {
         });
     public BasicForm() {
         setCompositionRoot(panel);
-        
-        /*Button logoutBtn = new Button("Выход", e->{
-            VaadinSession.getCurrent().close();
-            Page.getCurrent().reload();
-        });*/
-        
+
         hLogoutLayout.addComponent(logoutBtn);
         hLogoutLayout.setComponentAlignment(logoutBtn, Alignment.MIDDLE_RIGHT);
         hLogoutLayout.setWidth("100%");
@@ -61,9 +56,7 @@ public class BasicForm extends CustomComponent implements View, Handler  {
         hLayout.addComponents(hInfoLayout,hLogoutLayout);
         hLayout.setComponentAlignment(hLogoutLayout, Alignment.MIDDLE_RIGHT);
         hLayout.setWidth("100%");
-        
-        //checkCurrentUser();
-        //addComponent(hLayout);
+
         vLayout.addComponent(hLayout);
                 
         panel.setContent(vLayout);
@@ -78,10 +71,9 @@ public class BasicForm extends CustomComponent implements View, Handler  {
     public boolean checkCurrentUser(){
        
         user = VaadinSession.getCurrent().getAttribute(Employee.class);
-        
+
         if (user!=null){
             userLbl.setCaption("Пользователь: "+user.getFullName());
-            //positionLbl.setCaption("Должность: "+user.getPosition());
             return true;
         }else{
             getUI().getNavigator().navigateTo(LOGIN_FORM);
